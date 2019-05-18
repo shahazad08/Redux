@@ -1,3 +1,14 @@
 export const INCREMENT_COUNT="INCREMENT_COUNT";
 export const DECREMENT_COUNT="DECREMENT_COUNT";
+export const OPEN_MENU="OPEN_MENU";
+export const CLOSE_MENU="CLOSE_MENU";
+export const OPEN_PROFILE="OPEN_PROFILE";
+export const CLOSE_PROFILE="CLOSE_PROFILE";
+export const INPUT_EMAIL="INPUT_EMAIL";
+export const INPUT_PASSWORD="INPUT_PASSWORD";
+
+
+
+
+
 

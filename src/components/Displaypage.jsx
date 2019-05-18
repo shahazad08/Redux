@@ -1,6 +1,11 @@
 import React ,{Component} from 'react';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 import { INCREMENT_COUNT, DECREMENT_COUNT } from '../constants/actionTypes';
+import appheader from './appheader';
+import AppHeader from './appheader';
+import GridLayout from './GridLayout';
+import CardLayout from './CardComponent';
+import newStyle from '../Style.less';
 
 const mapDispatchToProps=dispatch=>({
     increment_count:()=>dispatch({
@@ -27,17 +32,29 @@ increment_count(){
 decrement_count(){
     this.props.decrement_count()
 }
-
     
     render(){
-        console.log("cipooh---"+this.props.count.count);
-        
+        console.log("cipooh---"+this.props.count.count);        
         return(
-            <div>
-                <h1>Welcome to Redux</h1>
+            <div >
+                <AppHeader/>
+                <div className={newStyle.maindivs}>
                 <button onClick={()=>this.increment_count()}>Counter_Increment</button>
                 <div>{this.props.count.count}</div>
                 <button onClick={()=>this.decrement_count()}>Counter_Decrement</button>
+                {/* <GridLayout/> */}
+                <div className={newStyle.cards}>
+                <CardLayout/>
+                
+                <CardLayout/>
+                <CardLayout/>
+                <CardLayout/>
+                <CardLayout/>
+                <CardLayout/>
+
+                </div>
+               
+                </div>
             </div>
         )
     }
